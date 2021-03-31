@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Coopcycle print organizer",
+  "description": "print organizer for tickets on coopcyle",
+  "version": "1.0",
+  "permissions": ["*://*.coopcycle.org/*", "tabs", "activeTab"],
+  "web_accessible_resources": ["content.js"],
+
+  "icons": {
+    "128": "./img/128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["./background.js"],
+    "persistent": true
+  }
+}
