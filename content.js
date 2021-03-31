@@ -28,7 +28,8 @@ html += `<br/><br/>`;
 html += `<p>commande: </p>`;
 
 for (var i = 0; i < tr.length; i++) {
-  html += `<Strong>${dish[i].innerHTML}</Strong>`;
+  let price = tr[i].getElementsByClassName("text-right")[0].innerHTML;
+  html += `<Strong>${dish[i].innerHTML}: ${price}</Strong></br>`;
 
   if (tr[i].getElementsByTagName("ul")) {
     var options = tr[i].getElementsByTagName("li");
@@ -39,11 +40,25 @@ for (var i = 0; i < tr.length; i++) {
   }
 }
 
+
+// get price total
+var trPrice = table[1].getElementsByTagName("tr");
+var priceTotal = table[1].getElementsByClassName("text-right")[0].innerHTML;
+var priceTotalDelivery = table[1].getElementsByClassName("text-right")[1].innerHTML;
+
+
+
+
+html += `<Strong>Total produits: ${priceTotal}</Strong>`
+html += `</br>`
+html += `<Strong>Total: ${priceTotalDelivery}</Strong>`
+
+
+
 html += "</table>";
 
 document.body.innerHTML = html;
 var sheet = window.document.styleSheets[0];
 sheet.insertRule("body { text-align: center; }", sheet.cssRules.length);
-window.print()
+window.print();
 document.location.reload();
-
