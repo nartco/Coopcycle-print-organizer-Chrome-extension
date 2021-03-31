@@ -28,7 +28,7 @@ html += `<br/><br/>`;
 html += `<p>commande: </p>`;
 
 for (var i = 0; i < tr.length; i++) {
-  html += `<h4>${dish[i].innerHTML}</h4>`;
+  html += `<Strong>${dish[i].innerHTML}</Strong>`;
 
   if (tr[i].getElementsByTagName("ul")) {
     var options = tr[i].getElementsByTagName("li");
