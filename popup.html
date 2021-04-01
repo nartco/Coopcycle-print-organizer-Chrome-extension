@@ -4,6 +4,7 @@
     <style>
       body {
         background-color: #1e1e1e;
+        text-align: center;
       }
       button {
         height: 80px;
@@ -11,15 +12,56 @@
         outline: none;
         font-weight: bold;
         color: black;
+        margin-bottom: 10px;
+      }
+      .printButton {
+        content: url("./img/printer.png");
+        height: 40px;
+        width: 40px;
+      }
+      .totalButton {
+        content: url("./img/money.png");
+        height: 40px;
+        width: 40px;
       }
       #activate {
-        margin-bottom: 10px;
         background-color: #00ff00;
+      }
+      #total {
+        background-color: #ff00a1;
+      }
+      .totalMoney {
+        width: 120px;
+        height: 80px;
+        background-color: #00ff00;
+        vertical-align: middle;
+        text-align: center;
+        display: none;
+      }
+      .totalMoney > div {
+        padding-top: 9vw;
+        text-align: center;
+      }
+      .totalMoney > div > p {
+        font-size: 12vw;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+      }
+      .totalMoney > div > h5 {
+        font-size: 9vw;
+        margin: 0;
+        padding: 0;
+      }
+      .visible {
+        display: block;
       }
     </style>
   </head>
   <body>
-    <button id="activate">IMPRIMER</button>
+    <button id="activate"><i class="printButton"></i></button>
+    <button id="total"><i class="totalButton"></i></button>
+    <div class="totalMoney"></div>
     <script src="./background.js"></script>
   </body>
 </html>
