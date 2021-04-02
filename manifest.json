@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Coopcycle print organizer",
-  "description": "print organizer for tickets on coopcyle",
-  "version": "1.0",
-  "permissions": ["*://*.coopcycle.org/*", "tabs", "activeTab"],
+  "name": "Coopcycle print organizer & daily total",
+  "description": "print organizer for tickets on coopcyle & Get daily total money",
+  "version": "2.0",
+  "permissions": ["*://*.coopcycle.org/*", "activeTab"],
   "web_accessible_resources": ["content.js"],
 
   "icons": {

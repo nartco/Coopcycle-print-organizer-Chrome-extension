@@ -22,7 +22,7 @@ const GetFormattedDate = date => {
 
 button2.addEventListener("click", async () => {
   chrome.tabs.query({ active: true, currentWindow: true }, tab => {
-    if (tab[0].url.includes("admin/restaurants/")) {
+    if (tab[0].url.includes("/restaurants")) {
       var date = tab[0].url.match(/date=\w+\W\w+\W\w+/gm);
       date = date[0];
 
